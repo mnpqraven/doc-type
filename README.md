@@ -1,0 +1,1 @@
+# A small Rust crate for generating documents from your types
