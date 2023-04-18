@@ -1,5 +1,5 @@
 [package]
-name = "type-doc"
+name = "doc-type"
 version = "0.1.0"
 edition = "2021"
 description = "A small Rust crate for generating documents from your types"
