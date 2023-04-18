@@ -1,8 +1,10 @@
+use self::types::FormatError;
 use specta::{
     ts::{self, ExportConfiguration},
     NamedType, Type,
 };
 
+mod types;
 
 /// Creates a type as a string
 ///
@@ -23,11 +25,6 @@ use specta::{
 pub fn generate_typedoc<T: Type + NamedType>() -> Result<String, FormatError> {
     let export_str = ts::export::<T>(&ExportConfiguration::default()).unwrap();
     trim_export(&export_str)
-}
-
-#[derive(Debug, PartialEq, Eq)]
-pub enum FormatError {
-    TrimError,
 }
 
 fn trim_export(exported_str: &str) -> Result<String, FormatError> {
