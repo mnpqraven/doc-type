@@ -1,24 +1,8 @@
 //! # My Crate
-//! this is a crate description
+//! This is a crate aiming towards proving (only TS for now) types as text for
+//! documentation purposes. You can think of this crate as a thin [`specta`]
+//! wrapper that adds helper functions to the export types to manipulated
+//! produced string
 
-/// Adds one to the number given
-/// # Examples
-/// ```
-/// let a = 1;
-/// let b = 2;
-/// assert_eq!(3, type_doc::add(a, b))
-/// ```
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+mod ts;
+pub use ts::generate_typedoc;
