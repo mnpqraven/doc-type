@@ -4,9 +4,10 @@
 //! wrapper that adds helper functions to the export types to manipulated
 //! produced string
 
+#[cfg(feature = "ts")]
 mod ts;
+pub use ts::generate_typedoc;
+pub use ts::types::*;
 // NOTE: rust features in development
 #[cfg(feature = "rust")]
 mod rust;
-pub use ts::generate_typedoc;
-pub use ts::types::*;
