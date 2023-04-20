@@ -1,6 +1,6 @@
 [package]
 name = "doc-type"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "A small Rust crate for generating documents from your types"
 license = "GPL-2.0"
@@ -19,3 +19,7 @@ opt-level = 1
 
 [profile.release]
 opt-level = 3
+
+[features]
+default = ["rust"]
+rust = []

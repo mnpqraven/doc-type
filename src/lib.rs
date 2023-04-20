@@ -5,4 +5,8 @@
 //! produced string
 
 mod ts;
+// NOTE: rust features in development
+#[cfg(feature = "rust")]
+mod rust;
 pub use ts::generate_typedoc;
+pub use ts::types::*;
